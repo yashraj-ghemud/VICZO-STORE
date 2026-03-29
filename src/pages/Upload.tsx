@@ -117,7 +117,8 @@ export function Upload() {
       }
       setIsSuccess(true);
     } catch (err: any) {
-      handleFirestoreError(err, OperationType.CREATE, type === "app" ? "apps" : "websites");
+      const message = err instanceof Error ? err.message : String(err);
+      setError(message);
     } finally {
       setIsSubmitting(false);
     }

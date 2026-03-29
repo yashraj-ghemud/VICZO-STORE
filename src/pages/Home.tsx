@@ -285,7 +285,7 @@ export function Home() {
                   viewport={{ once: true, margin: "-40px" }}
                   transition={{ duration: 0.45, delay: i * 0.05 }}
                 >
-                  <Link to={`/${activeTab}/${item.slug}`}>
+                  <Link to={`/${activeTab === "apps" ? "app" : "website"}/${item.slug}`}>
                     <Card className="card-glow h-full flex flex-col overflow-hidden group border-[var(--color-border-default)]">
                       <CardContent className="p-5 flex-grow flex flex-col">
                         <div className="flex items-start gap-3 mb-3">
